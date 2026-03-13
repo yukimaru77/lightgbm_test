@@ -55,9 +55,11 @@ def main() -> None:
 
     model = lgb.LGBMClassifier(
         objective="binary",
+        device_type="cuda",
         n_estimators=200,
         learning_rate=0.05,
         num_leaves=31,
+        max_bin=255,
         random_state=42,
     )
     model.fit(X_train, y_train)
@@ -68,6 +70,7 @@ def main() -> None:
     metrics = {
         "accuracy": round(float(accuracy_score(y_test, pred)), 4),
         "roc_auc": round(float(roc_auc_score(y_test, pred_proba)), 4),
+        "device_type": "cuda",
     }
 
     importance_df = pd.DataFrame(

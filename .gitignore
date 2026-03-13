@@ -2,5 +2,6 @@ AGENTS.md
 TOOLS.md
 skills
 .venv/
+build/
 __pycache__/
 *.pyc
