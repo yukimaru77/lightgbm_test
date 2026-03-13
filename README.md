@@ -74,6 +74,18 @@ uv run --no-sync train-lightgbm
 ./scripts/run_gpu_demo.sh
 ```
 
+Jupyter notebook を使う場合:
+
+```bash
+uv sync
+./scripts/build_lightgbm_cuda.sh
+jupyter lab
+```
+
+notebook:
+
+- `notebooks/lightgbm_gpu_demo.ipynb`
+
 ## 実行結果
 
 実行すると、以下のファイルが生成されます。
@@ -99,6 +111,8 @@ uv run --no-sync train-lightgbm
 .
 ├── data/
 │   └── dummy_tabular_data.csv
+├── notebooks/
+│   └── lightgbm_gpu_demo.ipynb
 ├── outputs/
 │   ├── classification_report.txt
 │   ├── feature_importance.csv
