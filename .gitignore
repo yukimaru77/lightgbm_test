@@ -1,0 +1,6 @@
+AGENTS.md
+TOOLS.md
+skills
+.venv/
+__pycache__/
+*.pyc
